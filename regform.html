@@ -1,0 +1,84 @@
+<html>
+<head>
+<style>
+
+</style>
+</head>
+<body  style="background-color:#E6E6FA;margin-top:60px;margin-left:30px;">
+
+<table>
+<col width=150>
+<tr>
+<td style="height:30px;">User Name</td><td style="height:30px;"><input type="text" name="first name" id="1"></td></tr>
+<tr>
+<td style="height:30px;">Emailid</td><td style="height:30px;"><input type="text" name="email "id="2"></td></tr>
+<tr>
+<td style="height:30px;">Ph No</td><td style="height:30px;"><input type="text" name="ph" id="3"></td></tr>
+<tr>
+<td style="height:30px;">Password</td><td style="height:30px;"><input type="text" name="first name" id="4"></td></tr>
+<tr>
+<td style="height:30px;"> Re-enter Password</td><td style="height:30px;"><input type="text" name="first name" id="5"></td></tr>
+</table>
+<br>
+<input type="submit"  value="submit"  onClick="abc()">
+<script type="text/javascript">
+function abc()
+{
+var c=/[0-9]/g;
+var b=document.getElementById("1").value;
+if(b=="")
+{
+alert("enter your username");
+}
+if(c.test(b)==0)
+{
+}
+else
+{
+alert("enter alphabets");
+}
+if(b.length<6)
+{
+alert("username should be more than 6 characters");
+}
+
+
+var m=/@[a-z]{4,10}.[a-z]{1,3}/
+var n=document.getElementById("2").value;
+if((m.test(n))==0)
+{
+alert("enter valid email address");
+}
+
+
+var f=/[0-9]/g;
+var g=document.getElementById("3").value;
+if((f.test(g))==1)
+{
+}
+else
+{
+alert("enter numbers");
+}
+if(g.length!=10)
+{
+
+alert("phone number should be 10 digits");
+}
+
+var h=document.getElementById("4").value;
+var j=document.getElementById("5").value;
+if(h<6)
+{
+alert("password should be more than 6 characters");
+}
+
+if(h!=j)
+{
+alert("passwords did not match");
+}
+
+}
+</script>
+</body>
+</html>
